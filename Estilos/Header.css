@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor .headerContenedor {
+    background: #12203E;
+    color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    grid-area: header;
+    
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+
+    grid-template-areas: "Logotipo LogoTipo menuPrincipal botonLogin";
+}
+
+.contenedor .headerContenedor .imagoTipo{
+    align-items: center;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-area: Logotipo;
+    grid-template-areas: "logo textoLogo";
+}
+
+.contenedor .headerContenedor .imagoTipo .logo{
+    grid-area: logo;
+}
+
+.contenedor .headerContenedor .imagoTipo .textLogo{
+    grid-area: textoLogo;
+}
+
+.contenedor .headerContenedor .menu{
+    grid-area: menuPrincipal;
+    margin-top: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor .headerContenedor .menu .item{
+    transition: 0.3s ease;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    border-top: 4px solid #12203E;
+    border-bottom: 4px solid #12203E;
+    padding: 20px 0;
+    margin: 0 20px;
+}
+
+.contenedor .headerContenedor .menu .item:hover{
+    border-top: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+    padding: 6px 0; 
+}
+
+@media screen and (min-width: 1026px){
+    .contenedor .headerContenedor .imagoTipo{
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px){
+    .contenedor .headerContenedor .imagoTipo{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px){
+    .contenedor .headerContenedor .imagoTipo{
+        font-size: 10px;
+        text-align: center;
+        grid-template-areas: "logo"
+                             "textoLogo";
+    }
+}

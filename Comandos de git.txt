@@ -1,0 +1,102 @@
+Comandos:
+
+	git: Muestra datos principales sobre git
+    	git --version: Muestra la version de git instalada
+	cd "Disco y carpetas a las que deseemos ir (/c/escritorio) ": Comando para viajar entre carpetas del computador 
+	cd ..: Retrocede a la carpeta anterior del directorio
+	pwd: Muestra el directorio actual
+   	ls: Muestra todos los documentos de la carpeta actual (No enseña los archivos ocultos)
+   	ls -al: Muestra todos los archivos ocultos y no ocultos
+   	ls -a: Muestra los documentos ocultos
+	ls -l: Muestra los documentos no ocultos
+  	clear: Limpia la ventana de comandos
+	mkdir "Nombre del Proyecto": Crea una carpeta en el directorio actual
+ 	touch "Documento a crear con su extension (Texto.txt)": Crea un nuevo archivo en el directorio actual 
+  	cat "Documento a mostrar": Muesta el texto del archivo seleccionado
+	history: Muestra todos los comandos utilizados hasta el momento
+   	rm "Nombre del documento": Elimina el documento seleccionado
+	rm -rf "Nombre de la carpeta": Elimina la carpeta seleccionada
+   	git init: Crea un nuevo repositorio, en la carpeta actual
+   	code: Abre Visual Studio Code
+   	git status: Muestra los datos guardados y no guardados en el STAGING, y muestra cuando todo esta en el commit
+   	git add .: Ingresa todos los cambios en el STAGING
+	git add "Nombre del archivo a cambiar": Ingresa los cambios del archivo actual en el STAGING
+   	git commit -m "Nombre de la nueva version": crea un nuevo commit(version) y lo añade al repositorio
+	git config --list: Muestra los datos configurados en nuestra sesion de git
+	git config --list --show-origin: Muestra el directorio de todos los archivos git
+	git config --global user.name "Kevin Cardenas": Remplaza de forma global el nombre de usuario por uno nuevo
+   	git config --global user.email "kevinca711100@gmail.com" Remplaza de forma global el correo por uno nuevo
+	git log "Nombre del archivo": Muestra las versiones del documento seleccionado
+	git log: Muestra las versiones de todos los documentos del repositorio
+	git log --stat: Muestra las versiones de todos los documentos del repositorio de forma mucho mas especifica
+	git log --all: muestra absolutamente todos los cambios
+	git log --all --graph --decorate --oneline: muestra absolutamente todos los cambios con graficos simples
+	git show "Nombre del archivo": Muestra los bits remplazados entre el HEAD y su version actual
+	code "Nombre del archivo": Abre el documento en Visual Studio Code 
+  	git commit: genera error y pide escribir el nombre del nuevo commit, para salir de ese editor se pulsa (escape,shift,z,z)
+	git diff "ID del la version" "ID del la version": compara los cambios entre una version y otra 
+	git help: Muestra los comandos mas comunes de git
+ 	git reset "ID del la version" --hard: Elimina la version seleccionada de forma permanente
+	git reset "ID del la version" --soft: Elimina la version seleccionada de y almacena sus cambios en STAGING para no perderlos
+ 	git checkout "ID del la version" "Documento a modificar": Seleccionar una version especifica y modifica el documento sin perder ninguna version
+	git checkout "ID del la version": Seleccionar una version especifica y modifica el repositorio sin perder ninguna version
+ 	git checkout master historia.txt: Selecciona el HEAD de las versiones 
+	git rebase HEAD master: Codigo para volver a conectar el HEAD con su version anterior
+	git commit -am "Nombre para el commit": realiza el add y el comit a la vez(Debe de haberse realizado por lo menos una vez un add de estos datos)
+	git pull origin "rama a enviar(debe estar selecionada en git la rama a usar": para clonar el repositorio origen o virtual a el local
+	git push origin "rama a enviar(debe estar selecionada en git la rama a usar": modifica el entorno de origen con el local
+	alias "nombre del alias"=""linea de comando a remplazar por el alias"": permite usar un alias cualquiera por un comando especifico
+	git branch: muestra las ramas existentes
+	git show-branch --all: muestra las rams de forma muy especifica
+	gitk: muestra todo de forma visual, en un software
+	git branch "nombre de la rama": crea una rama nueva
+	git merge "Rama a unir con la actual": une dos ramas
+	git clone "Urlde GitHub": clona el repositorio origen en el local, se usa cuando no tenemos repositorio local
+	git config "user.name o user.email": otorga el correo o el nombre depositado en git
+
+	crear versiones para mostrar en github (tags): 
+	
+		git tag -a "nombre del tag" -m "Mensaje" "hash o codigo de el commit a usar"
+		git tag: muestra lostags actuales
+		git push origin --tags: añadir tags al origen
+		git tag -d "Tag": elimina el tag seleccionado
+		git push origin :refs/tags/"nombre tag": elimina el tag en el origen
+
+	seguridad creacion de clave publica y privada:
+
+		ssh-keygen -t rsa -b 4096 -C "kevinca100711@gmail.com": codigo para crear mi sistema de seguridad de clave publica y privada
+		ssh-add ~/.ssh/id_rsa: Se introduce la direccion de la clave publica para agregar la contraseña
+		git remote set-url origin "Link del repositorio para ssh": remplaza la url por el formato ssh (clave publica y privada)
+
+	git.rebase(desarmar una rama, y añadirla a otra, desaparece la historia de esa rama desarmada)(no usar en repositorio origen solo en local para solucionar errores)
+		
+		git rebase master: desde la rama a desarmar se escribe la rama a la cual se quiere acoplar y luego rebase a la rama principal(git rebase "la rama a desarmar")
+
+	git.stash(es una funcion que permite guardar cambios de forma temporal, si aun no queremos realizar un commit a esos cambios)
+
+		git stash: Almacena esos datos en un espacio tamporal
+		git stash list: muestra el commit anterior a la modificacion
+		git stash pop: vuelve a traer los cambios
+		git stash drop: elimina los cambios temporales
+		git stash branch "nombre de la rama": crea una nueva rama e introduce los cambios guardados en el stash
+	
+	git cherry-pick "id del commit de la rama a relaizar merge con la rama actual": agrega el commit deseado a la rama seleccionada
+	git commit --amend: permite modificar el ultimo commit creado
+	git branch -D "Rama a eliminar": borra la rama seleccionada
+	git reflog: muestra todos los cambios commit etc(muestra una especie de registro (HEAD@{0}) y con ello se puede volver a ese registro anterior)
+	git reset HEAD@{0}: colocamos la posicion a volver (gurda los datos eliminados en staging)
+	git reset --hard "Id del commit al que quiero volver": elimina todos los cambios por encima del commit seleccionado de forma permanente
+
+	git grep (sirve para buscar texto introducido en un commit):
+
+		git grep -n ""Palabra clave a buscar"": busca en cada documento las palabras que tenga similitus, las muestra y tambien la linea donde se encontro
+		git grep -c ""Palabra clave a buscar"": solo muestra en cada documento la cantidad de concidencias que hay con la palabra a buscar
+
+	git log -s ""Palabra clave a buscar"": muestra los commit que tengan en su nombre la palabra a buscar
+	git shortlog -sn --all --no-merges: muestra los commits  echos por cada usuario en el repositorio
+	git config --global alias."nombre del alias" ""condigo a poner el alias, pero sin el git""
+	git blame -c "archivo a revisar": muestra quien realizo cada linea de codigo de un archivo
+	git blame "archivo a revisar" -L"numero de la linea a iniciar","linea a terminar": busca solo las lineas seleccionadas 
+	"comando a revisar" --help: muestra como funciona el comando seleccionado
+	git branch -r: muestra las ramas en el repositorio origen
+	git branch -a: muestra todas las ramas
