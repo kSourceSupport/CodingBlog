@@ -9,6 +9,7 @@ body {
     color: #000;
     width: 97%;
     margin: 20px auto;
+    margin-top: 5px;
     text-align: center;
     display: grid;
     grid-gap: 20px;
