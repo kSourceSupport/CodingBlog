@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -7,57 +8,65 @@
     <link rel="stylesheet" href="Estilos/Header.css">
     <title>Responsive</title>
 </head>
+
 <body>
-    <section class = "contenedor">
-        <header class = "headerContenedor">
-            <section class = "imagoTipo">
-                <picture class = "logo">
-                    <source media="(min-width: 1000px)" srcset="img/LogoMaximo.png">
-                    <source media="(min-width: 500px) and (max-width: 700px)" srcset="img/LogoMedio.png">
-                    <source media="(min-width: 200px) and (max-width: 500px)" srcset="img/LogoMinimo.png">
-                    <img src="img/LogoMaximo.png" alt="logo">
-                </picture>
-                <h2 class = "textLogo">CodingBlog</h2>
-            </section>
-            <nav class = "menu">
-                <ul>
-                    <li><a class = "item" href="">Blog</a></li>
-                    <li><a class = "item" href="">Buscar</a></li>
-                    <li><a class = "item" href="">Contactos</a></li>
-                    <li><a class = "item" href="">Notificaciones</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section class = "contenido">
-            <h1>Contenido</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam assumenda nemo corporis quod. Quaerat recusandae dolore ullam corrupti natus voluptatum debitis animi aperiam qui corporis earum, nemo nam repellendus molestias.
-                Reiciendis quas voluptatem sunt nostrum quos illum perferendis molestiae officia sit tempora, quisquam voluptates, incidunt neque nobis natus similique deserunt. Qui ipsam illo velit et commodi laborum quasi sit porro.
-                Nobis, enim rerum modi quod tempora voluptates soluta laudantium aliquid eum reiciendis vel voluptatibus, voluptate rem delectus accusantium optio perferendis corporis qui fugiat? Molestiae tempore ad quo exercitationem eos maxime.
-                Perspiciatis nisi facilis ducimus tempore? in earum porro nihil odit libero dolorum sed exercitationem tempora voluptates ad eaque qui assumenda ex facere provident voluptatibus nemo a? Voluptatibus praesentium voluptate quod.
-                <br></br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam assumenda nemo corporis quod. Quaerat recusandae dolore ullam corrupti natus voluptatum debitis animi aperiam qui corporis earum, nemo nam repellendus molestias.
-                Reiciendis quas voluptatem sunt nostrum quos illum perferendis molestiae officia sit tempora, quisquam voluptates, incidunt neque nobis natus similique deserunt. Qui ipsam illo velit et commodi laborum quasi sit porro.
-                Nobis, enim rerum modi quod tempora voluptates soluta laudantium aliquid eum reiciendis vel voluptatibus.
-                <br></br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam assumenda nemo corporis quod. Quaerat recusandae dolore ullam corrupti natus voluptatum debitis animi aperiam qui corporis earum, nemo nam repellendus molestias.
-                Reiciendis quas voluptatem sunt nostrum quos illum perferendis molestiae officia sit tempora, quisquam voluptates, incidunt neque nobis natus similique deserunt. Qui ipsam illo velit et commodi laborum quasi sit porro.
-                Nobis, enim rerum modi quod tempora voluptates soluta laudantium aliquid eum reiciendis vel voluptatibus, voluptate rem delectus accusantium optio perferendis corporis qui fugiat? Molestiae tempore ad quo exercitationem eos maxime.
-                Perspiciatis nisi facilis ducimus tempore? in earum porro nihil odit libero dolorum sed exercitationem tempora voluptates ad eaque qui assumenda ex facere provident voluptatibus nemo a? Voluptatibus praesentium voluptate quod.
-            </p>
+
+    <header class="headerContenedor">
+
+        <section class="imagoTipo">
+            <picture class="logo">
+                <source media="(min-width: 1000px)" srcset="img/LogoMaximo.png">
+                <source media="(min-width: 500px) and (max-width: 700px)" srcset="img/LogoMedio.png">
+                <source media="(min-width: 200px) and (max-width: 500px)" srcset="img/LogoMinimo.png">
+                <img src="img/LogoMaximo.png" alt="logo">
+            </picture>
+            <h2 class="textLogo">CodingBlog</h2>
         </section>
-        <aside class = "sidebar">
-            <h3>SIDEBAR</h3>
-        </aside>
-        <div class = "widget1">
-            <h3>WIDGET 1</h3>
-        </div>
-        <div class = "widget2">
-            <h3>WIDGET 2</h3>
-        </div>
-        <footer class = "footer">
-            <h3>FOOTER</h3>
-        </footer>
+
+        <input type="checkbox" class="btnMenu">
+        <label for="btn_menu" class="labelMenu"> <img src="img/IconoMenuPequeño.png" alt=""></label>
+
+        <nav class="menu">
+            <ul>
+                <li><a class="item" href="">Blog</a></li>
+                <li><a class="item" href="">Buscar</a></li>
+                <li><a class="item" href="">Contactos</a></li>
+                <li><a class="item" href="">Notificaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contenido">
+        <h1>Contenido</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam assumenda nemo corporis quod. Quaerat recusandae dolore ullam corrupti natus voluptatum debitis animi aperiam qui corporis earum, nemo nam repellendus molestias. Reiciendis quas voluptatem
+            sunt nostrum quos illum perferendis molestiae officia sit tempora, quisquam voluptates, incidunt neque nobis natus similique deserunt. Qui ipsam illo velit et commodi laborum quasi sit porro. Nobis, enim rerum modi quod tempora voluptates
+            soluta laudantium aliquid eum reiciendis vel voluptatibus, voluptate rem delectus accusantium optio perferendis corporis qui fugiat? Molestiae tempore ad quo exercitationem eos maxime. Perspiciatis nisi facilis ducimus tempore? in earum porro
+            nihil odit libero dolorum sed exercitationem tempora voluptates ad eaque qui assumenda ex facere provident voluptatibus nemo a? Voluptatibus praesentium voluptate quod.
+            <br></br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam assumenda nemo corporis quod. Quaerat recusandae dolore ullam corrupti natus voluptatum debitis animi aperiam qui corporis earum, nemo nam repellendus molestias. Reiciendis quas voluptatem
+            sunt nostrum quos illum perferendis molestiae officia sit tempora, quisquam voluptates, incidunt neque nobis natus similique deserunt. Qui ipsam illo velit et commodi laborum quasi sit porro. Nobis, enim rerum modi quod tempora voluptates
+            soluta laudantium aliquid eum reiciendis vel voluptatibus.
+            <br></br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam assumenda nemo corporis quod. Quaerat recusandae dolore ullam corrupti natus voluptatum debitis animi aperiam qui corporis earum, nemo nam repellendus molestias. Reiciendis quas voluptatem
+            sunt nostrum quos illum perferendis molestiae officia sit tempora, quisquam voluptates, incidunt neque nobis natus similique deserunt. Qui ipsam illo velit et commodi laborum quasi sit porro. Nobis, enim rerum modi quod tempora voluptates
+            soluta laudantium aliquid eum reiciendis vel voluptatibus, voluptate rem delectus accusantium optio perferendis corporis qui fugiat? Molestiae tempore ad quo exercitationem eos maxime. Perspiciatis nisi facilis ducimus tempore? in earum porro
+            nihil odit libero dolorum sed exercitationem tempora voluptates ad eaque qui assumenda ex facere provident voluptatibus nemo a? Voluptatibus praesentium voluptate quod.
+        </p>
     </section>
+    <aside class="sidebar">
+        <h3>SIDEBAR</h3>
+    </aside>
+    <div class="widget1">
+        <h3>WIDGET 1</h3>
+    </div>
+    <div class="widget2">
+        <h3>WIDGET 2</h3>
+    </div>
+    <footer class="footer">
+        <h3>FOOTER</h3>
+    </footer>
+
 </body>
+
 </html>

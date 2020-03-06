@@ -1,84 +1,100 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-.contenedor .headerContenedor {
+.headerContenedor {
+    width: 100%;
     background: #12203E;
     color: #fff;
-    padding: 20px;
     border-radius: 4px;
     grid-area: header;
-    
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
-
-    grid-template-areas: "Logotipo LogoTipo menuPrincipal botonLogin";
+    grid-template-areas: "Logotipo LogoTipo LogoTipo btnMenu";
+    text-align: center;
+    align-items: center;
 }
 
-.contenedor .headerContenedor .imagoTipo{
+.headerContenedor .btnMenu {
+    display: none;
+}
+
+.headerContenedor .menu ul li {
+    border-right: 1px solid #fff;
+}
+
+.headerContenedor .menu ul li:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.headerContenedor .labelMenu:hover {
+    cursor: pointer;
+    /*para que cambie el mouse por la mano de seleccion*/
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.headerContenedor .labelMenu {
+    display: block;
+    grid-area: btnMenu;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+.headerContenedor .menu {
+    display: none;
+}
+
+.headerContenedor .menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.headerContenedor .menu ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.headerContenedor .imagoTipo {
     align-items: center;
     display: grid;
     grid-gap: 5px;
+    padding-left: 10px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     grid-area: Logotipo;
     grid-template-areas: "logo textoLogo";
 }
 
-.contenedor .headerContenedor .imagoTipo .logo{
+.headerContenedor .imagoTipo .logo {
     grid-area: logo;
 }
 
-.contenedor .headerContenedor .imagoTipo .textLogo{
+.headerContenedor .imagoTipo .textLogo {
     grid-area: textoLogo;
 }
 
-.contenedor .headerContenedor .menu{
-    grid-area: menuPrincipal;
-    margin-top: 10px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contenedor .headerContenedor .menu .item{
-    transition: 0.3s ease;
-    color: #ffffff;
-    font-size: 20px;
-    text-decoration: none;
-    border-top: 4px solid #12203E;
-    border-bottom: 4px solid #12203E;
-    padding: 20px 0;
-    margin: 0 20px;
-}
-
-.contenedor .headerContenedor .menu .item:hover{
-    border-top: 4px solid #ffffff;
-    border-bottom: 4px solid #ffffff;
-    padding: 6px 0; 
-}
-
-@media screen and (min-width: 1026px){
-    .contenedor .headerContenedor .imagoTipo{
-        font-size: 25px;
+@media screen and (min-width: 768px) {
+    .headerContenedor {
+        grid-template-areas: "Logotipo LogoTipo menuPrincipal menuPrincipal";
+    }
+    .headerContenedor .menu {
+        grid-area: menuPrincipal;
+        display: block;
+    }
+    .headerContenedor .menu ul {
+        flex-direction: row;
+    }
+    .headerContenedor .btnMenu {
+        display: none;
+    }
+    .headerContenedor .labelMenu {
+        display: none;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1025px){
-    .contenedor .headerContenedor .imagoTipo{
-        font-size: 15px;
-    }
-}
-
-@media screen and (min-width: 300px) and (max-width: 767px){
-    .contenedor .headerContenedor .imagoTipo{
-        font-size: 10px;
-        text-align: center;
-        grid-template-areas: "logo"
-                             "textoLogo";
-    }
-}
+@media screen and (min-width: 300px) and (max-width: 767px) {}
