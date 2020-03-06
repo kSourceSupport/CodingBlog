@@ -15,14 +15,11 @@
 
 .headerContenedor .btnMenu {
     display: none;
+    grid-area: btnMenu;
 }
 
 .headerContenedor .menu ul li {
     border-right: 1px solid #fff;
-}
-
-.headerContenedor .menu ul li:hover {
-    background: rgba(0, 0, 0, 0.2);
 }
 
 .headerContenedor .labelMenu:hover {
@@ -60,6 +57,11 @@
     text-decoration: none;
 }
 
+.headerContenedor .btnMenu:checked~.menu {
+    /*cuando el checkbox sea presionado busca la clase menu en el html*/
+    margin-right: 0;
+}
+
 .headerContenedor .imagoTipo {
     align-items: center;
     display: grid;
@@ -89,6 +91,9 @@
     }
     .headerContenedor .menu ul {
         flex-direction: row;
+    }
+    .headerContenedor .menu ul li:hover {
+        background: rgba(0, 0, 0, 0.2);
     }
     .headerContenedor .btnMenu {
         display: none;
